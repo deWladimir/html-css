@@ -1,0 +1,138 @@
+body {
+    padding-top: 85px;
+    padding-left: 95px;
+    padding-right: 15px;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(233, 232, 232, 0.2);
+    min-width: 430px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 10px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4px;
+}
+
+.img-thumbnail {
+    position: relative;
+    height: 225px;
+    width: 100%;
+}
+
+.img-thumbnail img {
+    height: inherit;
+    object-position: center;
+    object-fit: cover;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.img-thumbnail button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 3px;
+    padding: 4px 6px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.video-info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.video-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.video-info-paragraphs {
+    margin-left: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.video-info-paragraphs p {
+    margin: 0px;
+}
+
+.video-info-paragraphs .title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.video-info-paragraphs .author {
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(148, 148, 148);
+    margin-bottom: 4px;
+}
+
+.video-info-paragraphs .stats {
+    font-size: 13px;
+    font-weight: 300;
+    color: rgb(156, 156, 156);
+}
+
+@media (min-width: 1350px) {
+    .video-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 950px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .video-info-paragraphs .title {
+        font-size: 14px;
+    }
+
+    .video-info-paragraphs .author {
+        font-size: 12px;
+    }
+
+    .video-info-paragraphs .stats {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container {
+        margin-left: 75px;
+        margin-right: 75px;
+    }
+}
+
+@media (max-width: 560px) {
+    .middle-header-section input {
+        display: none;
+    }
+}
